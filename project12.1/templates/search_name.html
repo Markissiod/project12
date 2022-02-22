@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/search/">
+        <input type="text" placeholder="Поиск" name="name">
+
+    </form>
+</div>
+<h2>найдено кандидатов {{count}}</h2><br>
+<div>
+    {% for user in users %}
+    <!--{{user}}<br><br>-->
+    <p><a href="/candidate/{{user.id}}">{{user}}</a></p>
+    {% endfor %}
+</div>
+</body>
+</html>
